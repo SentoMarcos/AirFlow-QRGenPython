@@ -2,7 +2,22 @@ import qrcode
 from PIL import Image, ImageDraw, ImageFilter
 import cairosvg
 import json
+#comentario doxygen
+#* @file QRGenerador
+#* @brief Este archivo genera un código QR con bordes redondeados y un logo integrado.
+#* @details El código QR contiene información sobre un producto, como un UUID y un número de serie.
+#* @autor Sento Marcos Ibarra
+#* @date 2021/10/01
 
+#*@function make_rounded_qr_with_border
+#*@brief Genera un código QR con bordes redondeados y un logo integrado
+#*@param data Información a codificar en el código QR
+#*@param fill_color Color de los cuadrados del código QR
+#*@param back_color Color de fondo del código QR
+#*@param logo Logo a integrar en el código QR
+#*@param border_radius Radio de los bordes redondeados
+#*@return rounded_qr Imagen del código QR con bordes redondeados y logo integrado
+#*@details [TEXTO]:data, Texto:fill_color, Texto:back_color, SVG:logo, R:border_radius -> make_rounded_qr_with_border() -> Imagen:rounded_qr 
 def make_rounded_qr_with_border(data, fill_color, back_color, logo, border_radius=20):
    
     qr = qrcode.QRCode(
